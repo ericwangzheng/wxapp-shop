@@ -1,0 +1,157 @@
+/**index.wxss**/
+
+.top {
+  width: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 150px;
+}
+
+.classify {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  padding: 10rpx 0;
+}
+
+.classify .active {
+  color: #e35160;
+  position: relative;
+}
+
+.classify .active::after {
+  content: '';
+  position: absolute;
+  bottom: -9rpx;
+  left: 0;
+  width: 100%;
+  height: 4rpx;
+  background: #e35160;
+}
+
+.classify::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1rpx;
+  background: #cdcdcd;
+  transform: scaleY(0.5);
+}
+
+.classify-item {
+  width: calc(100%/3);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.classify-item:first-of-type::before {
+  content: '';
+  width: 0;
+  height: 0;
+}
+
+.classify-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1rpx;
+  z-index: 999;
+  height: 100%;
+  background: #cdcdcd;
+  transform: scaleY(0.5);
+}
+
+.classify-name {
+  font-size: 0.8em;
+}
+
+.filter {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  padding: 10rpx 0;
+}
+
+.filter-item {
+  width: calc(100%/4);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  position: relative;
+}
+
+.filter .active {
+  color: #e35160;
+}
+
+.filter::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1rpx;
+  background: #cdcdcd;
+  transform: scaleY(0.5);
+}
+
+.sort-arrow {
+  position: absolute;
+  width: 20rpx;
+  height: 40%;
+  top: 30%;
+  right: 30rpx;
+}
+
+.shop-list {
+  background: #dedede;
+  width: 100%;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.shop-item {
+  font-size: 14pt;
+  display: inline-block;
+  width: calc(50% - 2rpx);
+  margin-right: 2rpx;
+  margin-bottom: 2rpx;
+  overflow: hidden;
+  background: #fff;
+  padding-bottom: 16rpx;
+}
+
+.shop-item .img {
+  width: 100%;
+  height: 300rpx;
+}
+
+.shop-item .description {
+  font-size: 0.8em;
+  padding: 20rpx 16rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.shop-item .price {
+  padding: 20rpx 16rpx;
+  color: #e35160;
+  line-height: 1.5em;
+}
+
+.shop-item .money-icon {
+  font-size: 0.5em;
+}

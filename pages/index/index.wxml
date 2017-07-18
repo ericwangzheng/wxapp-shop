@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" indicator-active-color="#e35160">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="classify">
+    <view wx:for="{{classifyList}}" wx:key="" class="classify-item {{classify==item.index?'active':''}}" data-index="{{item.index}}" bindtap="changeClassify">
+      <text class="classify-count">{{item.count}}</text>
+      <text class="classify-name">{{item.name}}</text>
+    </view>
+  </view>
+  <view class="filter">
+    <view wx:for="{{filterList}}" class="filter-item {{filter==item.index?'active':''}} {{item.sortable?'sortable':''}}" data-index="{{item.index}}" data-sort="{{item.sortable}}" bindtap="changeFilter">
+      <text>{{item.name}}</text>
+      <image hidden="{{item.sortable?false:true}}" class="sort-arrow" src="{{sortIcons[sortStatus]}}"></image>
+    </view>
+  </view>
+  <view class="shop-list">
+    <view wx:for="{{productList}}" wx:key="" class="shop-item" data-id="item.id" bindtap="productDetail">
+      <image class="img" src="{{item.img}}" ></image>
+      <text class="description">{{item.description}}</text>
+      <text class="price"><text class="money-icon">￥</text>{{item.price}}</text>
+    </view>
+  </view>
+</view>

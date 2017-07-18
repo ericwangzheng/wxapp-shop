@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/product/product"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTextStyle":"white",
+    "navigationBarBackgroundColor": "#e35160",
+    "navigationBarTitleText": "WeChat"
+  },
+  "tabBar": {
+    "color":"#707070",
+    "selectedColor":"#e35160",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/index2.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "images/mine.png",
+      "selectedIconPath": "images/mine2.png"
+    }]
+  }
+}
